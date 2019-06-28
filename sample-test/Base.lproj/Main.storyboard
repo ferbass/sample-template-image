@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sample_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="battery" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-dr-5YS">
+                                <rect key="frame" x="87" y="320" width="240" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="KC5-xM-7lF"/>
+                                    <constraint firstAttribute="width" constant="240" id="maA-5E-q03"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2mD-Pq-Kol">
+                                <rect key="frame" x="18" y="644" width="378" height="31"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.012087071650988435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderDidChangeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kfr-P8-ziO"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C0M-4P-u6i">
+                                <rect key="frame" x="18" y="696" width="378" height="31"/>
+                                <color key="tintColor" red="0.0087351832792375017" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderDidChangeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="poY-p5-cOw"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-W9-xQ1">
+                                <rect key="frame" x="18" y="749" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderDidChangeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="dnu-6P-T3a"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2mD-Pq-Kol" firstAttribute="top" secondItem="j4f-dr-5YS" secondAttribute="bottom" constant="68" id="4cO-ha-RjW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R6Q-W9-xQ1" secondAttribute="trailing" constant="20" id="6ix-Lk-hTe"/>
+                            <constraint firstItem="C0M-4P-u6i" firstAttribute="top" secondItem="2mD-Pq-Kol" secondAttribute="bottom" constant="22" id="9TN-Qw-3RN"/>
+                            <constraint firstItem="j4f-dr-5YS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dba-0K-Vyu"/>
+                            <constraint firstItem="C0M-4P-u6i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="H5k-pt-4BO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C0M-4P-u6i" secondAttribute="trailing" constant="20" id="KbU-NE-wYg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mD-Pq-Kol" secondAttribute="trailing" constant="20" id="Kbp-hV-eN7"/>
+                            <constraint firstItem="R6Q-W9-xQ1" firstAttribute="top" secondItem="C0M-4P-u6i" secondAttribute="bottom" constant="23" id="Oa5-yU-uED"/>
+                            <constraint firstItem="j4f-dr-5YS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eRe-Wc-dm9"/>
+                            <constraint firstItem="R6Q-W9-xQ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nJj-20-Z1A"/>
+                            <constraint firstItem="2mD-Pq-Kol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rsA-Mx-wvS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="R6Q-W9-xQ1" id="1D9-Dp-c6J"/>
+                        <outlet property="greenSlider" destination="C0M-4P-u6i" id="wlG-Vn-X8w"/>
+                        <outlet property="imageView" destination="j4f-dr-5YS" id="C9V-Pk-goB"/>
+                        <outlet property="redSlider" destination="2mD-Pq-Kol" id="QZP-Ab-0Pl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="battery" width="36" height="36"/>
+    </resources>
+</document>
